@@ -54,16 +54,13 @@ In Excel, make sure your data is 'tidy' before trying to import it to RStudio. T
 
 #### TASK:
 
-1. Go to Canvas and download the file `HornedLizards_unstacked.csv`.
-2. Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.
-3. Save the tidy file as `HornedLizards.csv`.
-4. In either RStudio Cloud or in RStudio on your laptop (depending on how you are using RStudio), create a new folder in the project 'LS5022 Biostatistics' and call it 'Session 2'. Set it as your **working directory**.
-5. Upload the `HornedLizards.csv` file to the new folder Session 2 (or move it to the working directory folder if you are using your own laptop).
-<br>
-<br>
+1.  Go to Canvas and download the file `HornedLizards_unstacked.csv`.
+2.  Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.
+3.  Save the tidy file as `HornedLizards.csv`.
+4.  In either RStudio Cloud or in RStudio on your laptop (depending on how you are using RStudio), create a new folder in the project 'LS5022 Biostatistics' and call it 'Session 2'. Set it as your **working directory**.
+5.  Upload the `HornedLizards.csv` file to the new folder Session 2 (or move it to the working directory folder if you are using your own laptop). <br> <br>
 
-*BACKGROUND*: <br>
-Horned lizards have spikes around the head. A study investigated whether or not the spikes protected lizards against predation by shrikes – birds that skewer its victims on thorns to save for eating later.<br>
+*BACKGROUND*: <br> Horned lizards have spikes around the head. A study investigated whether or not the spikes protected lizards against predation by shrikes – birds that skewer its victims on thorns to save for eating later.<br>
 
 They measured (a) length of horns on lizards skewered on spikes and (b) length of horns on lizards that were alive.<br>
 
@@ -230,7 +227,7 @@ HornedLizard <- HornedLizard |>
 
 1.  Filters only those rows with no 'na' values <br> **NB** I have over-written the dataframe by storing this result without the NA values in the same dataframe name
 
-**NB2** The following code will do the same thing:<br> `HornedLizard |>` <br>        `drop_na(squamosalHornLength)`<br> (removing all rows with 'NA' in the *squamosalHornLength* column)
+**NB2** The following code will do the same thing:<br> `HornedLizard |>` <br> `drop_na(squamosalHornLength)`<br> (removing all rows with 'NA' in the *squamosalHornLength* column)
 
 ### Types of data
 
