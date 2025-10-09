@@ -43,22 +43,27 @@ library(knitr)
 
 <br> **CLICK ON THE TAB 'TIDY DATA' BELOW TO GET STARTED.**
 
-:::::: panel-tabset
+:::::::::: panel-tabset
 ### Tidy data
 
 In Excel, make sure your data is 'tidy' before trying to import it to RStudio. The basic rules of tidy data are:
 
-![Tidy data rules](Tidy.png){width="50%" .lightbox} <br><br><br> So, for example, this data of passengers on the RMS Titanic is tidy:
+![Tidy data rules](Tidy.png){.lightbox width="50%"} <br><br><br> So, for example, this data of passengers on the RMS Titanic is tidy:
 
-![Titanic passenger data](Tidy_titanic.png){fig-align="centre" width="70%" .lightbox} <br><br>
+![Titanic passenger data](Tidy_titanic.png){.lightbox fig-align="centre" width="70%"} <br><br>
 
 #### TASK:
 
-1.  Go to Canvas and download the file `HornedLizards_unstacked.csv`.<br>
-2.  Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.<br>
-3.  Save the tidy file as **HornedLizards.csv** and either (a) upload it to RStudio on Posit cloud or (b) save it to a folder on your laptop (depending on how you are using RStudio - on the cloud or on your laptop).<br>
+1. Go to Canvas and download the file `HornedLizards_unstacked.csv`.
+2. Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.
+3. Save the tidy file as `HornedLizards.csv`.
+4. In either RStudio Cloud or in RStudio on your laptop (depending on how you are using RStudio), create a new folder in the project 'LS5022 Biostatistics' and call it 'Session 2'. Set it as your **working directory**.
+5. Upload the `HornedLizards.csv` file to the new folder Session 2 (or move it to the working directory folder if you are using your own laptop).
+<br>
+<br>
 
-*Background*: Horned lizards have spikes around the head.<br> A study investigated whether or not the spikes protected lizards against predation by shrikes – birds that skewer its victims on thorns to save for eating later.<br>
+*BACKGROUND*: <br>
+Horned lizards have spikes around the head. A study investigated whether or not the spikes protected lizards against predation by shrikes – birds that skewer its victims on thorns to save for eating later.<br>
 
 They measured (a) length of horns on lizards skewered on spikes and (b) length of horns on lizards that were alive.<br>
 
@@ -66,8 +71,7 @@ They measured (a) length of horns on lizards skewered on spikes and (b) length o
 
 ### Import data to RStudio
 
-Once you have prepared your *xlsx* or *csv* file for importing, you can import the file to RStudio. <br><br> `1.` First, in RStudio go to the folder where your excel or csv file is located (using the Files directory in RStudio).<br>
-Set this location (where the file is and where you want to save your work) as your **working directory** by clicking on the 'More' cog icon and selecting `Set As Working Directory`.<br> 
+Once you have prepared your *xlsx* or *csv* file for importing, you can import the file to RStudio. <br><br> `1.` First, in RStudio go to the folder where your excel or csv file is located (using the Files directory in RStudio).<br> Set this location (where the file is and where you want to save your work) as your **working directory** by clicking on the 'More' cog icon and selecting `Set As Working Directory`.<br>
 
 ![Files Directory: cog icon](RStudio_settings.png){width="70%"}
 
@@ -114,6 +118,7 @@ head(HornedLizard) |>
 #| results: FALSE
 view(HornedLizard)
 ```
+
 or even more simply by clicking the name of the dataframe in the Environment.
 
 <br> `(c)` You can see summary descriptive data (using the `describeBy()` function from the *psych* package)
@@ -145,7 +150,8 @@ describeBy(squamosalHornLength ~ Survival, data = HornedLizard)
 HornedLizard |>  #<1>
   summarise_all(class)
 ```
-1. Uses a 'pipe' (|>) to send the HornedLizard dataframe to the summarise_all(class) function.
+
+1.  Uses a 'pipe' (\|\>) to send the HornedLizard dataframe to the summarise_all(class) function.
 
 ::: {.callout-note collapse="true" title="Click to see the data types in each column" icon="false"}
 ```{r}
@@ -171,7 +177,8 @@ You can see how many missing values are in any column with:
 HornedLizard |>
   summarise(count = sum(is.na(squamosalHornLength))) #<1>
 ```
-1. Pipes the HornedLizard dataframe to the summarise() function to count missing values ('na')
+
+1.  Pipes the HornedLizard dataframe to the summarise() function to count missing values ('na')
 
 ::: {.callout-note collapse="true" title="Click to see the missing values" icon="false"}
 ```{r}
@@ -182,6 +189,7 @@ HornedLizard |>
   summarise(count = sum(is.na(squamosalHornLength))) |>
   kable(align = 'l')
 ```
+
 This code counts how many NAs appear in cells in the squamosalHornLength column in the dataframe.
 :::
 
@@ -196,7 +204,8 @@ You can see that there is one row with missing measurements.
 HornedLizard |>
   filter(is.na(squamosalHornLength)) #<1>
 ```
-1. Pipes the HornedLizard dataframe to the filter() function which filters any rows with 'na' in the squamosalHornLength column
+
+1.  Pipes the HornedLizard dataframe to the filter() function which filters any rows with 'na' in the squamosalHornLength column
 
 ::: {.callout-note collapse="true" title="Click to see the rows with missing values" icon="false"}
 ```{r}
@@ -218,11 +227,10 @@ HornedLizard |>
 HornedLizard <- HornedLizard |>
   filter(!is.na(squamosalHornLength)) #<1>
 ```
-1. Filters only those rows with no 'na' values
-<br>
-**NB** I have over-written the dataframe by storing this result without the NA values in the same dataframe name
 
-**NB2** The following code will do the same thing:<br> `HornedLizard |>` <br> `drop_na(squamosalHornLength)`<br> (removing all rows with NA in the *squamosalHornLength* column)
+1.  Filters only those rows with no 'na' values <br> **NB** I have over-written the dataframe by storing this result without the NA values in the same dataframe name
+
+**NB2** The following code will do the same thing:<br> `HornedLizard |>` <br>        `drop_na(squamosalHornLength)`<br> (removing all rows with 'NA' in the *squamosalHornLength* column)
 
 ### Types of data
 
@@ -253,6 +261,7 @@ HornedLizard |>
   summarise_all(class) |> 
   kable(align = 'l')
 ```
+
 Survival has been stored as character data.
 :::
 
@@ -280,8 +289,8 @@ HL_revised <- HornedLizard |>
 HL_revised |>
   summarise_all(class)
 ```
-Survival has been stored as factor data.<br>
-<br>If we had needed to change the squamosalHornLength variable column to numeric or integer data, we would use:
+
+Survival has been stored as factor data.<br> <br>If we had needed to change the squamosalHornLength variable column to numeric or integer data, we would use:
 
 `HL_revised <- HornedLizard |>`<br> `mutate(squamosalHornLength = as.numeric(squamosalHornLength))`
 
@@ -312,4 +321,4 @@ This saves the RData file in your working directory.<br><br> To open the datafra
 1.  You can watch a short video in which I carry out the commands referred to in these notes in RStudio.<br> You can watch the video from Canvas [by clicking here](https://canvas.kingston.ac.uk/courses/30443/pages/session-2-importing-files-to-rstudio) <br><br>
 
 2.  All of this and so much more is freely available in an on-line book called:<br> **R for Data Science** which can be found at:<br><br> [R for Data Science (click on this link)](https://r4ds.hadley.nz/)<br><br> This is a great reference source for using R to manage data. It also contains 3 chapters on creating graphic visualisations using the package ggplot2 which we will be using in later sessions.<br> It does not, however, include how to carry out statistical analyses.
-::::::
+::::::::::

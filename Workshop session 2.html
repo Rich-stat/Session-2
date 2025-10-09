@@ -134,11 +134,13 @@ Click to see packages to load (Copy and paste to Script editor)
 <section id="task" class="level4">
 <h4 class="anchored" data-anchor-id="task">TASK:</h4>
 <ol type="1">
-<li>Go to Canvas and download the file <code>HornedLizards_unstacked.csv</code>.<br></li>
-<li>Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.<br></li>
-<li>Save the tidy file as <strong>HornedLizards.csv</strong> and either (a) upload it to RStudio on Posit cloud or (b) save it to a folder on your laptop (depending on how you are using RStudio - on the cloud or on your laptop).<br></li>
+<li>Go to Canvas and download the file <code>HornedLizards_unstacked.csv</code>.</li>
+<li>Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.</li>
+<li>Save the tidy file as <code>HornedLizards.csv</code>.</li>
+<li>In either RStudio Cloud or in RStudio on your laptop (depending on how you are using RStudio), create a new folder in the project ‘LS5022 Biostatistics’ and call it ‘Session 2’. Set it as your <strong>working directory</strong>.</li>
+<li>Upload the <code>HornedLizards.csv</code> file to the new folder Session 2 (or move it to the working directory folder if you are using your own laptop). <br> <br></li>
 </ol>
-<p><em>Background</em>: Horned lizards have spikes around the head.<br> A study investigated whether or not the spikes protected lizards against predation by shrikes – birds that skewer its victims on thorns to save for eating later.<br></p>
+<p><em>BACKGROUND</em>: <br> Horned lizards have spikes around the head. A study investigated whether or not the spikes protected lizards against predation by shrikes – birds that skewer its victims on thorns to save for eating later.<br></p>
 <p>They measured (a) length of horns on lizards skewered on spikes and (b) length of horns on lizards that were alive.<br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -430,7 +432,7 @@ Click to see the rows with missing values
 </dl>
 </div>
 </div>
-<p><strong>NB2</strong> The following code will do the same thing:<br> <code>HornedLizard |&gt;</code> <br> <code>drop_na(squamosalHornLength)</code><br> (removing all rows with NA in the <em>squamosalHornLength</em> column)</p>
+<p><strong>NB2</strong> The following code will do the same thing:<br> <code>HornedLizard |&gt;</code> <br> <code>drop_na(squamosalHornLength)</code><br> (removing all rows with ‘NA’ in the <em>squamosalHornLength</em> column)</p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
 <p>Data can be numeric, integer, character or factor. R attempts to identify the type when you import data:</p>
