@@ -54,10 +54,14 @@ In Excel, make sure your data is 'tidy' before trying to import it to RStudio. T
 
 #### TASK:
 
-1.  Go to Canvas and download the file `HornedLizards_unstacked.csv`.
+1.  Go to Canvas and download the file [HornedLizards_unstacked.csv](https://kingstonuniversity-my.sharepoint.com/:x:/g/personal/ku11417_kingston_ac_uk/IQC41wwJVY_UQ5li6vlw36SHAZ4eTeqyVYca9SiVBzCWhDI?e=OWO0c5)
+
 2.  Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.
+
 3.  Save the tidy file as `HornedLizards.csv`.
+
 4.  In either RStudio Cloud or in RStudio on your laptop (depending on how you are using RStudio), create a new folder in the project 'LS5022 Biostatistics' and call it 'Session 2'. Set it as your **working directory**.
+
 5.  Upload the `HornedLizards.csv` file to the new folder Session 2 (or move it to the working directory folder if you are using your own laptop). <br> <br>
 
 *BACKGROUND*: <br> Horned lizards have spikes around the head. A study investigated whether or not the spikes protected lizards against predation by shrikes – birds that skewer its victims on thorns to save for eating later.<br>
@@ -233,11 +237,11 @@ HornedLizard <- HornedLizard |>
 
 Data can be numeric, integer, character or factor. R attempts to identify the type when you import data:
 
--   **Numeric** (with decimal places - shown as 'dbl') and **integer** are numeric data (dbl or int)
+- **Numeric** (with decimal places - shown as 'dbl') and **integer** are numeric data (dbl or int)
 
--   **Character** is text (chr)
+- **Character** is text (chr)
 
--   **Factors** are when characters or numbers are used to identify categories or groups (fct)
+- **Factors** are when characters or numbers are used to identify categories or groups (fct)
 
 <br>We can see what the data types are:
 
