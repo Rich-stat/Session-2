@@ -54,7 +54,7 @@ In Excel, make sure your data is 'tidy' before trying to import it to RStudio. T
 
 #### TASK:
 
-1.  Go to Canvas and download the file [HornedLizards_unstacked.csv](https://kingstonuniversity-my.sharepoint.com/:x:/g/personal/ku11417_kingston_ac_uk/IQC41wwJVY_UQ5li6vlw36SHAZ4eTeqyVYca9SiVBzCWhDI?e=OWO0c5)
+1.  Go to Canvas and download the file [HornedLizards_unstacked.csv](https://kingstonuniversity.sharepoint.com/:x:/r/teams/LSPC/BMS/Modules/LS50XX%20Biostatistics/Biostatistics%20lectures%20%26%20workshops/Session%202/Quarto%20files/HornedLizards_unstacked.csv?d=wd992d9edbaf44c35b26d69e41b6eb2e1&csf=1&web=1&e=ju7ES3)
 
 2.  Open the file in Excel and arrange the data to make it tidy in preparation for importing it to RStudio.
 
