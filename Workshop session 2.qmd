@@ -319,7 +319,7 @@ This saves the RData file in your working directory.<br><br> To open the datafra
 
 ### Further information
 
-1.  You can watch a short video in which I carry out the commands referred to in these notes in RStudio.<br> You can watch the video from Canvas [by clicking here](https://canvas.kingston.ac.uk/courses/30443/pages/session-2-importing-files-to-rstudio) <br><br>
+1.  You can watch a short video in which I carry out the commands referred to in these notes in RStudio.<br> You can watch the video from Canvas [by clicking here](https://kingstonuniversity.sharepoint.com/:v:/t/LSPC/BMS/IQA2v3kWEsWNRJ-F6BPZ4O_AARNzwq4Ryl1iq_ooUpJsaDI?e=fSzGUA) <br><br>
 
 2.  All of this and so much more is freely available in an on-line book called:<br> **R for Data Science** which can be found at:<br><br> [R for Data Science (click on this link)](https://r4ds.hadley.nz/)<br><br> This is a great reference source for using R to manage data. It also contains 3 chapters on creating graphic visualisations using the package ggplot2 which we will be using in later sessions.<br> It does not, however, include how to carry out statistical analyses.
 ::::::::::
